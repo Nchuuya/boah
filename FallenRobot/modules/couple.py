@@ -65,7 +65,7 @@ __New couple of the day may be chosen at 12AM {tomorrow}__"""
             c1_name = (await pbot.get_users(c1_id)).first_name
             c2_name = (await pbot.get_users(c2_id)).first_name
             couple_selection_message = f"""Couple of the day:
-[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = 😘
+[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = 😘 Now Kiss Each Other
 __New couple of the day may be chosen at 12AM {tomorrow}__"""
             await pbot.send_message(
                 message.chat.id, text=couple_selection_message

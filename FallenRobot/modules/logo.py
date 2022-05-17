@@ -276,12 +276,12 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black")
     fname = "fallen.png"
     img.save(fname, "png")
-    await telethn.send_file(event.chat_id, file=fname, caption = f"ʟᴏɢᴏ ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ")         
+    await telethn.send_file(event.chat_id, file=fname, caption = f"ʟᴏɢᴏ ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ @Tessia_Robot")         
     await pesan.delete()
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
-    await event.reply(f'ғʟᴏᴏᴅᴡᴀɪᴛ ᴇʀʀᴏʀ, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ @DevilsHeavenMF')
+    await event.reply(f'ғʟᴏᴏᴅᴡᴀɪᴛ ᴇʀʀᴏʀ, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ @TessiaXSupport')
 
 
 __mod_name__ = "Lᴏɢᴏ​"

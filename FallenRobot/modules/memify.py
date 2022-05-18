@@ -48,7 +48,7 @@ async def handler(event):
 
     msg = await event.reply("```Memifying this image! ✊🏻 ```")
 
-    if "AnonymousBoy1025" in Credit:
+    if "Xelcius" in Credit:
        pass
 
     else: 

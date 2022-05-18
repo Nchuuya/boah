@@ -22,22 +22,22 @@
       "TOKEN": {
          "description": "Get bot token from @BotFather on TG",
          "required": true,
-         "value": "5358928774:AAGSR3vfODTYl64Se98Cvr6R8d-lRm3exUs"
+         "value": "5362127009:AAH7E9XHsKyM6pLNAhfy0wb-HiX9lL57FB4"
       },
       "API_ID": {
          "description": "Get this value from my.telegram.org/apps.",
          "required": true,
-         "value": "17789594"
+         "value": "7761098"
       },
       "API_HASH": {
          "description": "Get this value from my.telegram.org/apps.",
          "required": true,
-         "value": "ab1b831edb2bd32905d6572ce621f678"
+         "value": "6b19682d1aeeda50a4aa8b6eb61f3a4e"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, Leave this field empty if you don't have one.",
          "required": false,
-         "value": "postgresql://obitmudn:kXjeSU_Ds1mh0rw8yD-tIcmvvFNl3xHk@lallah.db.elephantsql.com/obitmudn"
+         "value": "postgres://btzfrfoz:V4w59Z9Mi-QR2lUh9sbxh6Wuu74UmeFr@heffalump.db.elephantsql.com/btzfrfoz"
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
@@ -46,7 +46,7 @@
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-        "value": ""
+        "value": "f5c87d1e-dfd5-430b-9692-3c6e792d0a6d"
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
@@ -54,17 +54,17 @@
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "Xelcius"
+         "value": "Husbandoo"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Fallen Support than consider you made an enemy.",
          "required": true,
-         "value": "TessiaXSupport"
+         "value": "NexusXSupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": true,
-         "value": "mongodb+srv://jinkun:raizel9783@cluster0.yyayi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+         "value": "mongodb+srv://eris:eris@cluster0.2nmfn.mongodb.net/?retryWrites=true&w=majority"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -94,7 +94,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Fallen Support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "5132611794"
+         "value": ""
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",

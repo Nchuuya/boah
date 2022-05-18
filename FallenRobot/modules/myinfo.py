@@ -18,10 +18,8 @@ from FallenRobot import dispatcher
 edit_time = 5
 """ =======================FALLEN ROBOT====================== """
 file1 = "https://te.legra.ph/file/9fe11108a0a51a416976e.jpg"
-file2 = "https://telegra.ph/file/0885e3ac092be8863a1fd.jpg"
-file3 = "https://telegra.ph/file/35feff16ae517a1b96fed.jpg"
-file4 = "https://telegra.ph/file/b945c478a1d04aa458dfa.jpg"
-file5 = "https://telegra.ph/file/90c344943bed2278c8702.jpg"
+file2 = "https://te.legra.ph/file/3cc638e5688f518f3bf82.jpg"
+file3 = "https://te.legra.ph/file/cbe00611c9e493a91225f.jpg"
 """ =======================FALLEN ROBOT====================== """
 
 

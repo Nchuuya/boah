@@ -89,24 +89,28 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Me To Your Chat ➕",
+            text="➕ ᴀᴅᴅ ᴍɪꜱʜᴀ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕",
             url="t.me/MishaXRoBot?startgroup=true",
         ),
     ],
     [
         InlineKeyboardButton(
-            text="Support",
-            url="t.me/TessiaXSupport",
+            text="ᴍʏ ʜᴏᴍᴇ",
+            url="t.me/NexusXSupport",
         ),
         InlineKeyboardButton(
-            text="Updates",
-            url="https://t.me/TessiaBotUpdates",
+            text="ʜᴜꜱʙᴀɴᴅᴏ",
+            url="https://t.me/Husbandoo",
         ),
     ],
     [
         InlineKeyboardButton(
-            text="Help & Cmds ❔",
+            text="ʜᴇʟᴘ &",
             callback_data="help_back",
+        ),
+        InlineKeyboardButton(
+            text="ᴇʟᴅᴏʀᴀᴅᴏ™"
+            url="https://t.me/Eldoradoo"
         ),
     ],
 ]

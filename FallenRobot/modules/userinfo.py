@@ -240,7 +240,7 @@ def info(update: Update, context: CallbackContext):
 
     rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
-  text = (
+    text = (
         f"╒═══「<b>• Appraisal Results •</b> 」\n"
         f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
         f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
@@ -279,7 +279,7 @@ def info(update: Update, context: CallbackContext):
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
             text += "\nAppeal at @SpamWatchSupport"
-         else:
+        else:
             pass
     except:
         pass  # don't crash if api is down somehow...

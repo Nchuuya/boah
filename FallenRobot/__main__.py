@@ -77,21 +77,20 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 ────「 [{}](https://te.legra.ph/file/c9f73319920ef3bd0a5e4.mp4) 」────
 ᴋᴏɴ'ɴɪᴄʜɪᴡᴀ {} - sᴀɴ!  
-*I Am 𝙏𝙚𝙨𝙨𝙞𝙖 𝙀𝙧𝙖𝙡𝙞𝙩𝙝 A Powerful Group Management Bot With Many Amazing Features.*
+ɪ'ᴍ [𝗠𝗶𝘀𝗵𝗮](https://maou-gakuin.fandom.com/wiki/Misha_Necron) ᴀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-»  Advance In Modules.
-»  Many Tools As Well Fun Features.
-»  Faster Than Any Other Bot 
+» ᴜᴘᴛɪᴍᴇ {} 
+» ᴜsᴇʀs {} ᴀᴄʀᴏss {} ᴄʜᴀᴛs 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Hit The Help Button Below To Know About My Powers.××
-*Powered By* [𝙆𝙖𝙞𝙯𝙪𝙧𝙮𝙪](https://t.me/TheKaizuryu).
+ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀᴠᴀɪʟᴀʙʟᴇ ᴀғᴛᴇʀ ᴍʏ ᴇʟᴇᴍᴇɴᴛᴀʟ ʙᴜғғ. ××  
+𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺𝗡𝗲𝘅𝘂𝘀𝗫](https://t.me/TeamNexusX).
 """
 
 buttons = [
     [
         InlineKeyboardButton(
             text="➕ Add Me To Your Chat ➕",
-            url="t.me/Tessia_RoBot?startgroup=true",
+            url="t.me/MishaXRoBot?startgroup=true",
         ),
     ],
     [

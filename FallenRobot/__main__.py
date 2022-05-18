@@ -115,18 +115,18 @@ buttons = [
     ],
 ]
 
-FallenRobot_IMG = "https://telegra.ph/file/35feff16ae517a1b96fed.jpg"
-
 HELP_STRINGS = """
-Hey, [Tessia Eralith](https://telegra.ph/file/90c344943bed2278c8702.jpg) Here!
-To Use All My Feature, Do Give Full Rights In Chat
-Helpful Commands :
-- /start: Start Tessia Eralith Robot, Probably Done.
-- /help: To Know More About Tessia Robot.
-- /donate: Info About How To Support My Creator.
-Join My Support Chat For Any Queries Regaring Anything : @TessiaXSupport
+Hey there! Myself [ᴍɪꜱʜᴀ](https://telegra.ph/file/b5d470fa1c1fb55632d15.mp4).
+Have a look at the following for an idea of some of the things I can help you with.
+*Main* commands available:
+ ➛ /help: PM's you this message.
+ ➛ /help <module name>: PM's you info about that module.
+ ➛ /bug <error name> : inform support about that error 
+ ➛ /settings: 
+   ❂ in PM: will send you your settings for all supported modules.
+   ❂ in a group: will redirect you to pm, with all that chat's settings.\n• *ʀᴇᴀᴄʜ ᴏᴜᴛ ғᴏʀ sᴜᴘᴘᴏʀᴛ:* [sᴜᴘᴘᴏʀᴛ](https://t.me/NexusXSupport)
 """
-DONATE_STRING = """[Xelcius](https://t.me/Xelcius)"""
+DONATE_STRING = """[ʜᴜꜱʙᴀɴᴅᴏ](https://t.me/Husbandoo)"""
 
 IMPORTED = {}
 MIGRATEABLE = []

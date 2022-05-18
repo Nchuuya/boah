@@ -1,7 +1,7 @@
 {
-      "name": "Tessia Robot",
+      "name": "Misha Necron",
       "description": "Telegram Group Management Bot.",
-      "logo": "https://telegra.ph//file/4cb8e92ea92564c66a421.jpg",
+      "logo": "https://te.legra.ph/file/9fe11108a0a51a416976e.jpg",
       "keywords": [
          "telegram",
          "sexy",
@@ -9,7 +9,7 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/RimuruDemonlord/Tessia",
+   "repository": "https://github.com/Husbandoo/Misha",
    "addons": [
       {
          "options": {
@@ -69,12 +69,12 @@
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001508281652"
+         "value": "-1001740050450"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001508281652"
+         "value": "-1001740050450"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -99,7 +99,7 @@
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": "Vc~Jfv23rh7UhAggXCldhXGsD1uWiHa~MR9JsOHQiE6Tw8qT4yjRvgB6cFNi6XAT"
+         "value": "ixd7Qui~aQOTeaLynGRKeVqczYaZQFopZpfYagMx2ZrdUcSzMW~h2N1gJoGRZzmP"
       }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",

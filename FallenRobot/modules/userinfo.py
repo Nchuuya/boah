@@ -238,24 +238,24 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"ㅤ    ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n•❅─────✧❅✦❅✧─────❅•\n"
-        f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-        f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
+        f"╒═══「<b>• Appraisal Results •</b> 」\n"
+        f"» ID: <code>{user.id}</code>\n"
+        f"» First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➻ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
+        text += f"\n» Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
+        text += f"\n» Username: @{html.escape(user.username)}"
 
-    text += f"\n➻ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
+    text += f"\n» Userlink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
+        _stext = "\n» Presence: <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -264,21 +264,21 @@ def info(update: Update, context: CallbackContext):
             status = status = bot.get_chat_member(chat.id, user.id).status
             if status:
                 if status in {"left", "kicked"}:
-                    text += _stext.format("ɴᴏᴛ ʜᴇʀᴇ")
+                    text += _stext.format("Not here")
                 elif status == "member":
-                    text += _stext.format("ᴅᴇᴛᴇᴄᴛᴇᴅ")
+                    text += _stext.format("Detected")
                 elif status in {"administrator", "creator"}:
-                    text += _stext.format("ᴀᴅᴍɪɴ")
+                    text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
-            text += "\n\n<b>This person is Spamwatched!</b>"
-            text += f"\nReason: <pre>{spamwtc.reason}</pre>"
-            text += "\nAppeal at @SpamWatchSupport"
+            text += "\n\n» <b>This person is Spamwatched!</b>"
+            text += f"\n» Reason: <pre>{spamwtc.reason}</pre>"
+            text += "\n» Appeal at @SpamWatchSupport"
         else:
             pass
     except:
@@ -331,32 +331,53 @@ def info(update: Update, context: CallbackContext):
         if mod_info:
             text += "\n\n" + mod_info
 
-    if INFOPIC:
+  if INFOPIC:
         try:
             profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
-            _file = bot.get_file(profile["file_id"])
-            _file.download(f"{user.id}.png")
-
-            message.reply_document(
-                document=open(f"{user.id}.png", "rb"),
-                caption=(text),
+            context.bot.sendChatAction(chat.id, "upload_photo")
+            context.bot.send_photo(
+            chat.id,
+            photo=profile,
+            caption=(text),
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "Updates", url="https://t.me/TeamNexusX"),
+                            InlineKeyboardButton(
+                                "Disaster", url="https://t.me/MishaXUpdates/13"),
+                         ],
+                         [
+                            InlineKeyboardButton(
+                                "User", url=f"https://t.me/{html.escape(user.username)}")
+                        ],
+                    ]
+                ),
                 parse_mode=ParseMode.HTML,
-                disable_web_page_preview=True,
             )
-
-            os.remove(f"{user.id}.png")
         # Incase user don't have profile pic, send normal text
         except IndexError:
-            message.reply_text(
-                text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+                message.reply_text(
+                text,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "Updates", url="https://t.me/TeamNexusX"),
+                            InlineKeyboardButton(
+                                "Disaster", url="https://t.me/MishaXUpdates/13"),
+                         ],
+                         [
+                            InlineKeyboardButton(
+                                "User", url=f"https://t.me/{html.escape(user.username)}")
+                        ],
+                    ]
+                ),
+                parse_mode=ParseMode.HTML,
+                disable_web_page_preview=True
             )
 
-    else:
-        message.reply_text(
-            text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
-        )
-
-    rep.delete()
+    rep.delete()    
 
 
 @run_async

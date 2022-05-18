@@ -73,7 +73,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Deviant")
+        message.reply_text("This member is already a Destroyer Of The God")
         return ""
 
     if user_id in DEMONS:
@@ -94,7 +94,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt
-        + "\nSuccessfully set Disaster level of {} to Deviant!".format(
+        + "\nSuccessfully set Disaster level of {} to Destroyer Of The God!".format(
             user_member.first_name
         )
     )
@@ -155,7 +155,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Mana User!"
+        rt + f"\n{user_member.first_name} was added as a Demon Of Destruction!"
     )
 
     log_message = (
@@ -211,7 +211,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Conjurer!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a Humans!"
     )
 
     log_message = (
@@ -262,7 +262,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already an Augmenter.")
+        message.reply_text("This user is already an Sovereign Founder.")
         return ""
 
     data["tigers"].append(user_id)
@@ -272,7 +272,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to an Augmenter!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to an Sovereign Founder!"
     )
 
     log_message = (
@@ -460,7 +460,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known  Conjurers:</b>\n"
+    reply = "<b>Known  Humans:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -479,7 +479,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Augmentors:</b>\n"
+    reply = "<b>Known Sovereign Founder:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -501,7 +501,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
-    reply = "<b>Known Mana Users:</b>\n"
+    reply = "<b>Known Demon Of Destruction:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -520,7 +520,7 @@ def sudolist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Deviants:</b>\n"
+    reply = "<b>Known Destroyer Of The God:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -539,7 +539,7 @@ def devlist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Mages Association:</b>\n"
+    reply = "<b>Demon Emperor:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:

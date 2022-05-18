@@ -238,9 +238,9 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
-    text = (
+   text = (
         f"╒═══「<b>• Appraisal Results •</b> 」\n"
         f"» ID: <code>{user.id}</code>\n"
         f"» First Name: {html.escape(user.first_name)}"
@@ -290,7 +290,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Demon King</b>.\n"
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>Mᴇʍʙᴇr Of Demon Emperor</b>.\n"
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>Demon Emperor</b>.\n"
         disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Destroyer Of The God</b>.\n"
@@ -302,7 +302,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Sovereign Founder</b>.\n"
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Humans</b>.\n"
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Human</b>.\n"
         disaster_level_present = True
 
     if disaster_level_present:
@@ -331,53 +331,32 @@ def info(update: Update, context: CallbackContext):
         if mod_info:
             text += "\n\n" + mod_info
 
-  if INFOPIC:
+    if INFOPIC:
         try:
             profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
-            context.bot.sendChatAction(chat.id, "upload_photo")
-            context.bot.send_photo(
-            chat.id,
-            photo=profile,
-            caption=(text),
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "Updates", url="https://t.me/TeamNexusX"),
-                            InlineKeyboardButton(
-                                "Disaster", url="https://t.me/MishaXUpdates/13"),
-                         ],
-                         [
-                            InlineKeyboardButton(
-                                "User", url=f"https://t.me/{html.escape(user.username)}")
-                        ],
-                    ]
-                ),
+            _file = bot.get_file(profile["file_id"])
+            _file.download(f"{user.id}.png")
+
+            message.reply_document(
+                document=open(f"{user.id}.png", "rb"),
+                caption=(text),
                 parse_mode=ParseMode.HTML,
-            )
-        # Incase user don't have profile pic, send normal text
-        except IndexError:
-                message.reply_text(
-                text,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "Updates", url="https://t.me/TeamNexusX"),
-                            InlineKeyboardButton(
-                                "Disaster", url="https://t.me/MishaXUpdates/13"),
-                         ],
-                         [
-                            InlineKeyboardButton(
-                                "User", url=f"https://t.me/{html.escape(user.username)}")
-                        ],
-                    ]
-                ),
-                parse_mode=ParseMode.HTML,
-                disable_web_page_preview=True
+                disable_web_page_preview=True,
             )
 
-    rep.delete()    
+            os.remove(f"{user.id}.png")
+        # Incase user don't have profile pic, send normal text
+        except IndexError:
+            message.reply_text(
+                text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+            )
+
+    else:
+        message.reply_text(
+            text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+        )
+
+    rep.delete()
 
 
 @run_async

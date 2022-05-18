@@ -647,10 +647,10 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1356469075 and DONATION_LINK:
+        if OWNER_ID != 5132611794 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
-                "[here]({})".format(DONATION_LINK),
+                "You can also donate to the person currently running me @TheKaizuryu"
+                "[here](t.me/xelcius)".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
 

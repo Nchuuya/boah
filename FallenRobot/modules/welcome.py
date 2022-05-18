@@ -190,7 +190,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "My 'Arthur Leywin' Just Joined, Behold The Prowess Of The All Mighty.", reply_to_message_id=reply
+                    "My 'Demon King' Just Joined, Behold The Prowess Of The All Mighty.", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -202,7 +202,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Be cool! A member of the Mages Association just joined.",
+                    "Be cool! A member of the Demon Emperor just joined.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -215,7 +215,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Whoa! A Deviant just joined! Stay Alert!",
+                    "Whoa! A Destroyer Of The God just joined! Stay Alert!",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -228,20 +228,20 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "Huh! Someone with a Demon disaster level just joined!",
+                    "Huh! Someone with a Demon Disasters level just joined!",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"A Mana User just joined the group"
+                    f"A Demon Of Destruction  just joined the group"
                 )
                 continue
 
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_text(
-                    "Damn! An Aungmentor just joined!", reply_to_message_id=reply
+                    "Damn! An Sovereign Founder just joined!", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -253,7 +253,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Tigers
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "Damn! A Counjorer just joined!", reply_to_message_id=reply
+                    "Damn! A Humans just joined!", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"

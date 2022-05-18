@@ -105,7 +105,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="ʜᴇʟᴘ &",
+            text="ʜᴇʟᴘ & ᴄᴍᴅꜱ",
             callback_data="help_back",
         ),
         InlineKeyboardButton(

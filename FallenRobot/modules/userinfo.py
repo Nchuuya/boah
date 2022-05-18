@@ -240,22 +240,22 @@ def info(update: Update, context: CallbackContext):
 
     rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
-   text = (
+  text = (
         f"╒═══「<b>• Appraisal Results •</b> 」\n"
-        f"» ID: <code>{user.id}</code>\n"
-        f"» First Name: {html.escape(user.first_name)}"
+        f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
+        f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n» Last Name: {html.escape(user.last_name)}"
+        text += f"\n➻ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n» Username: @{html.escape(user.username)}"
+        text += f"\n➻ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
 
-    text += f"\n» Userlink: {mention_html(user.id, 'link')}"
+    text += f"\n➻ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n» Presence: <code>{}</code>"
+        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -264,21 +264,21 @@ def info(update: Update, context: CallbackContext):
             status = status = bot.get_chat_member(chat.id, user.id).status
             if status:
                 if status in {"left", "kicked"}:
-                    text += _stext.format("Not here")
+                    text += _stext.format("ɴᴏᴛ ʜᴇʀᴇ")
                 elif status == "member":
-                    text += _stext.format("Detected")
+                    text += _stext.format("ᴅᴇᴛᴇᴄᴛᴇᴅ")
                 elif status in {"administrator", "creator"}:
-                    text += _stext.format("Admin")
+                    text += _stext.format("ᴀᴅᴍɪɴ")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
-            text += "\n\n» <b>This person is Spamwatched!</b>"
-            text += f"\n» Reason: <pre>{spamwtc.reason}</pre>"
-            text += "\n» Appeal at @SpamWatchSupport"
+            text += "\n\n<b>This person is Spamwatched!</b>"
+            text += f"\nReason: <pre>{spamwtc.reason}</pre>"
+            text += "\nAppeal at @SpamWatchSupport"
          else:
             pass
     except:

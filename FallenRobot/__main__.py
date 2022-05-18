@@ -75,8 +75,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-────「 [𝙏𝙚𝙨𝙨𝙞𝙖 𝙀𝙧𝙖𝙡𝙞𝙩𝙝](https://telegra.ph/file/c696b98edbb6a3294c345.mp4) 」────
-*Hii There! Human,*
+────「 [{}](https://te.legra.ph/file/c9f73319920ef3bd0a5e4.mp4) 」────
+ᴋᴏɴ'ɴɪᴄʜɪᴡᴀ {} - sᴀɴ!  
 *I Am 𝙏𝙚𝙨𝙨𝙞𝙖 𝙀𝙧𝙖𝙡𝙞𝙩𝙝 A Powerful Group Management Bot With Many Amazing Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 »  Advance In Modules.

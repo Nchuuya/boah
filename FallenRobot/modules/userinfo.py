@@ -279,7 +279,7 @@ def info(update: Update, context: CallbackContext):
             text += "\n\n» <b>This person is Spamwatched!</b>"
             text += f"\n» Reason: <pre>{spamwtc.reason}</pre>"
             text += "\n» Appeal at @SpamWatchSupport"
-        else:
+         else:
             pass
     except:
         pass  # don't crash if api is down somehow...
@@ -293,13 +293,13 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>Demon Emperor</b>.\n"
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Destroyer Of The God</b>.\n"
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Destroyer Of Gods</b>.\n"
         disaster_level_present = True
     elif user.id in DEMONS:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Demon Of Destruction</b>.\n"
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Sovereign Founder</b>.\n"
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Soveriegn Founder</b>.\n"
         disaster_level_present = True
     elif user.id in WOLVES:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>Human</b>.\n"

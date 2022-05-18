@@ -75,12 +75,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-────「 [{}](https://te.legra.ph/file/c9f73319920ef3bd0a5e4.mp4) 」────
+────「 [𝗠𝗶𝘀𝗵𝗮 𝗡𝗲𝗰𝗿𝗼𝗻](https://te.legra.ph/file/c9f73319920ef3bd0a5e4.mp4) 」────
 ᴋᴏɴ'ɴɪᴄʜɪᴡᴀ {} - sᴀɴ!  
 ɪ'ᴍ [𝗠𝗶𝘀𝗵𝗮](https://maou-gakuin.fandom.com/wiki/Misha_Necron) ᴀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-» ᴜᴘᴛɪᴍᴇ {} 
-» ᴜsᴇʀs {} ᴀᴄʀᴏss {} ᴄʜᴀᴛs 
+»  Advance In Modules.
+»  Many Tools As Well Fun Features.
+»  Faster Than Any Other Bot.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀᴠᴀɪʟᴀʙʟᴇ ᴀғᴛᴇʀ ᴍʏ ᴇʟᴇᴍᴇɴᴛᴀʟ ʙᴜғғ. ××  
 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺𝗡𝗲𝘅𝘂𝘀𝗫](https://t.me/TeamNexusX).
@@ -109,11 +110,13 @@ buttons = [
             callback_data="help_back",
         ),
         InlineKeyboardButton(
-            text="ᴇʟᴅᴏʀᴀᴅᴏ™"
+            text="ᴇʟᴅᴏʀᴀᴅᴏ™",
             url="https://t.me/Eldoradoo"
         ),
     ],
 ]
+
+FallenRobot_IMG = "https://te.legra.ph/file/c9f73319920ef3bd0a5e4.mp4"
 
 HELP_STRINGS = """
 Hey there! Myself [ᴍɪꜱʜᴀ](https://telegra.ph/file/b5d470fa1c1fb55632d15.mp4).
